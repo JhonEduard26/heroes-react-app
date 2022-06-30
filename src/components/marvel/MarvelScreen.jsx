@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const MarvelScreen = () => {
-  return <div>MarvelScreen</div>
+  return <h1>Marvel Screen</h1>
 }

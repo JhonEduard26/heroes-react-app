@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const DcScreen = () => {
-  return <div>DcScreen</div>
+  return <h1>Dc Screen</h1>
 }
