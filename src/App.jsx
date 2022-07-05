@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useEffect, useReducer } from 'react'
 import './App.css'
 import { AuthContext } from './auth/AuthContext'
 import { authReducer } from './auth/authReducer'
@@ -10,6 +10,11 @@ const init = () => {
 
 function App() {
   const [user, dispatch] = useReducer(authReducer, {}, init)
+  console.log(user)
+
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(user))
+  }, [user])
 
   return (
     <AuthContext.Provider value={{ user, dispatch }}>
